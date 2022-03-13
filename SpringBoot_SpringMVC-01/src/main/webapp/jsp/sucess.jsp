@@ -1,4 +1,4 @@
-<%@ page isELIgnored ="fase"%>
+<%@ page isELIgnored ="false"%>
 
 ${sno} <br>
 ${sname} <br>
