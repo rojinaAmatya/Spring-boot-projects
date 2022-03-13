@@ -6,16 +6,19 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class StudentController {
 	
 	
-	@RequestMapping(value ={"/", "/register"})
+	@RequestMapping(value ={"/", "/login"})
 	public String loadForm() {
 		return "register";
 	}
 	
+	
+	@RequestMapping(value = "/register", method =RequestMethod.POST)
 	public String handleStudentForm(HttpServletRequest req, Model m) {
 		
 		int sno = Integer.parseInt(req.getParameter("sno"));
