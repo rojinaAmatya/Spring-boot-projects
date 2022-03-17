@@ -18,4 +18,11 @@ public class WelcomeController {
 	public String sayBye(){
 		return "Goodbye world";
 	}
+	
+	
+	@GetMapping("/hello")
+	public String sayHello(String name) {
+		return "Welcome: " + name;
+		}
+	
 }
