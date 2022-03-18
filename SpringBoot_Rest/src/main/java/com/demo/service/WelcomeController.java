@@ -3,6 +3,7 @@ package com.demo.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/welcome")
@@ -21,8 +22,8 @@ public class WelcomeController {
 	
 	
 	@GetMapping("/hello")
-	public String sayHello(String name) {
+	public String sayHello(@RequestParam("name") String name) {
 		return "Welcome: " + name;
 		}
-	
+
 }
